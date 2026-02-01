@@ -1,0 +1,247 @@
+@font-face {
+    font-family: "norse";
+    src: url('Norse-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 0 0 40%;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1.5rem 0;
+    margin-top: 20vh;
+    width: 100%;
+}
+
+.logo-container .logo {
+    width: 80px;
+    height: auto;
+    display: block;
+}
+
+.logo-container h1 {
+    font-family: 'norse', serif;
+    color: white;
+    font-size: 5rem;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    margin-top: 0.15em;
+}
+
+.photo-credit {
+    color: white;
+    font-size: 0.85rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+.photo-credit a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Main Content */
+.content {
+    flex: 1;
+    background-color: #f9fafb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro {
+    padding: 3rem 3rem 2rem 3rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    max-width: 800px;
+}
+
+.intro p {
+    margin-bottom: 1.5rem;
+}
+
+/* Form Section */
+.form-section {
+    background-color: white;
+    padding: 2rem 3rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.form-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: #1f2937;
+    margin-bottom: 0.25rem;
+}
+
+.form-group input {
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-group input:user-invalid {
+    border-color: #dc2626;
+}
+
+.create-account-btn {
+    margin-top: 2rem;
+    padding: 0.85rem 3rem;
+    background-color: #596d48;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.create-account-btn:hover {
+    background-color: #4a5a3a;
+}
+
+.login-link {
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+
+.login-link a {
+    color: #596d48;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsive */
+@media (max-width: 800px) {
+    body {
+        flex-direction: column;
+        background-image: url('background.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .sidebar {
+        flex: none;
+        background-image: none;
+        padding: 0;
+        justify-content: flex-start;
+    }
+
+    .logo-container {
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+        padding: 1rem 0;
+    }
+
+    .photo-credit {
+        position: fixed;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+
+    .content {
+        width: 80%;
+        margin: 0 auto;
+        background-color: transparent;
+        padding-bottom: 4rem;
+    }
+
+    .intro {
+        background-color: rgba(249, 250, 251, 0.95);
+        border-radius: 8px 8px 0 0;
+        padding: 2rem;
+    }
+
+    .form-section {
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 0 0 8px 8px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .form-section {
+        padding: 1.5rem;
+    }
+
+    .intro {
+        padding: 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    .logo-container h1 {
+        font-size: 4rem;
+    }
+
+    .logo-container .logo {
+        width: 60px;
+    }
+}
